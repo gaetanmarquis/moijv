@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{# block nav #}
+{# {{ parent() }} -> permet d'appeler le contenu du block nav parent et d'en rajouter pour un enfant spécifique #}
+{# ex: Bootstrap dans parent, CSS perso pour une page dans enfant #}
+{# endblock #}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>{{ prod.name }}</h1>
+
+    <p>{{ prod.creationDate|date("d-m-Y") }}</p>
+    <img src="{{ asset(prod.image) }}" alt="description image">
+    <p>{{ prod.description }}</p>
+</div>
+{% endblock %}
